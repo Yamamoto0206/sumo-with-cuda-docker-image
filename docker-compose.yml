@@ -1,0 +1,17 @@
+version: '3'
+services:
+  ubuntu:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: always
+    build: .
+    container_name: 'sumosim-cuda'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./sumosim:/root/sumosim
