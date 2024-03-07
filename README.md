@@ -37,4 +37,6 @@ $sumo --version
 `$python3`  
   `import torch`  
   `print(torch.cuda.is_available())`  
-Trueと出力されれば、GPUが使える環境にあります。
+`True`と出力されれば、GPUが使える環境にあります。
+3. ./sumosim内のファイルはホスト側とコンテナ内で共有されるので、コンテナを消しても残ります。  
+   この構造をカスタマイズしたい場合は、docker-compose.ymlをカスタマイズしてください。
