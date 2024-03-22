@@ -4,10 +4,10 @@
 ## 環境構築方法
 1. はじめに、GPUを持つ計算機上でDockerをインストールしておきます。
 以下のコマンドでDocker composeコマンドがインストールされているか確認してください。   
-`$docker-compose version`
+`$ docker-compose version`
 2. また、計算機にnvidiaのドライバーをインストールしておきます。
    以下のコマンドでインストールされているか確認してください。  
-   `$nvidia-smi`  
+   `$ nvidia-smi`  
 4. 以下のコマンドでContainerを起動できます。  
 `
 $docker-compose build
@@ -16,8 +16,8 @@ $docker-compose build
 $docker-compose up
 `
 5. 以下でimageと起動しているコンテナを確認してください  
-`$docker images`  
-`$dokcer ps` 
+`$ docker images`  
+`$ dokcer ps` 
 
 6. Containerの削除は以下のコマンドになります。  
 `

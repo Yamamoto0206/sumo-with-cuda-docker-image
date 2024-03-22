@@ -57,8 +57,8 @@ RUN wget https://sourceforge.net/projects/sumo/files/sumo/version%200.32.0/sumo-
 # PATHを~/.profileに追加
 RUN echo 'export PATH="$PATH:/usr/local/bin"' >> /root/.profile
 
-# PyTorchのインストール
-RUN pip3 install torch torchvision torchaudio
+# PyTorchのインストール、及び強化学習用のstable baseline3, gimnasiumのインストール
+RUN pip3 install torch torchvision torchaudio 'stable-baselines3[extra]' gimnasium
 
 ENV PATH="/usr/local/bin:${PATH}"
 
