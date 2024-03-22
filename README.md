@@ -27,14 +27,14 @@ $docker-compose down
 以下のコマンドをコンテナ内で確認してください。sumoとcudaが使えることを確認します。
 1. 以下のコマンドでsumo0がsumoのver.0.32のコマンドであることがわかります。  
 `
-$sumo0 --version
+$ sumo0 --version
 `  
 また、sumoはsumoのlatest-versionとなっています。  
 `
-$sumo --version 
-`  
+$ sumo --version 
+`  s
 2. 以下でGPU(cuda)が使えるかどうか確認してください。  
-`$python3`  
+`$ python3`  
   `import torch`  
   `print(torch.cuda.is_available())`  
 `True`と出力されれば、GPUが使える環境にあります。
