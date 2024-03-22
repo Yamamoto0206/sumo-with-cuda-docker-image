@@ -10,10 +10,10 @@
    `$ nvidia-smi`  
 4. 以下のコマンドでContainerを起動できます。  
 `
-$docker-compose build
+$ docker-compose build
 `  
 `
-$docker-compose up
+$ docker-compose up
 `
 5. 以下でimageと起動しているコンテナを確認してください  
 `$ docker images`  
