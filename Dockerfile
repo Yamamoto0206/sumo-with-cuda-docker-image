@@ -40,7 +40,7 @@ RUN apt-get update && \
     apt-get install -y \
         ruby \
         ruby-dev && \
-    gem install pycall gnuplot && \
+    gem install pycall gnuplot ox && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -54,6 +54,7 @@ RUN wget https://sourceforge.net/projects/sumo/files/sumo/version%200.32.0/sumo-
     make && \
     make install && \
     mv /usr/local/bin/sumo /usr/local/bin/sumo0 && \
+    mv /usr/local/bin/netconvert /usr/local/bin/netconvert0 && \
     mv /usr/local/bin/sumo-gui /usr/local/bin/sumo-gui0
 
 # PATHを~/.profileに追加
